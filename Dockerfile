@@ -9,12 +9,12 @@ apt-get update && apt-get install -y yarn
 RUN curl -sL https://deb.nodesource.com/setup_7.x | bash - && \
 apt-get install nodejs
 
-RUN mkdir /railsapp
-WORKDIR /railsapp
-COPY Gemfile /railsapp/Gemfile
-COPY Gemfile.lock /railsapp/Gemfile.lock
+RUN mkdir /household-account-book
+WORKDIR /household-account-book
+COPY Gemfile /household-account-book/Gemfile
+COPY Gemfile.lock /household-account-book/Gemfile.lock
 RUN bundle install
-COPY . /railsapp
+COPY . /household-account-book
 
 COPY entrypoint.sh /usr/bin/
 RUN chmod +x /usr/bin/entrypoint.sh

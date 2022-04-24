@@ -1,6 +1,6 @@
 #!/bin/bash
 set -e
 
-rm -f /railsapp/tmp/pids/server.pid
+rm -f /household-account-book/tmp/pids/server.pid
 
 exec "$@"

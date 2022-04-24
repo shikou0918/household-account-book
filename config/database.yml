@@ -10,4 +10,4 @@ default: &default
 
 development:
   <<: *default
-  database: railsapp_development
+  database: household-account-book_development
